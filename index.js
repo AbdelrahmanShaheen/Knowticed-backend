@@ -67,12 +67,15 @@ module.exports = Form;
 //make a post request to create a form data
 app.post("/form", async (req, res) => {
   try {
+    console.log(req.body);
     const form = await Form.create(req.body);
     res.status(201).send({ form });
   } catch (e) {
     res.status(400).send(e);
   }
 });
+//make a get request
+
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
   console.log(`listening on port ${port}`);
