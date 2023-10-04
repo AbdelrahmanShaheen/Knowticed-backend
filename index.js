@@ -15,7 +15,7 @@ const formSchema = new mongoose.Schema({
   name: {
     type: String,
     required: true,
-    minLength: [6, "Name must be at least 6 characters long"],
+    minLength: [1, "Name must be at least 6 characters long"],
     maxLength: 100,
   },
   email: {
